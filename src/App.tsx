@@ -1,9 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./header/Header";
+import Main from "./mainBlock/Main";
+import Skills from "./skills/Skills";
 
 function App() {
-  return <div>Portfolio</div>;
+  return (<>
+      <Header />
+      <Main />
+      <Skills />
+  </>)
 }
 
 export default App;

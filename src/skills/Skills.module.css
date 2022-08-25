@@ -1,0 +1,21 @@
+.skillsBlock {
+    /*vh - видимая высота экрана*/
+    height: 100vh;
+    background-color: beige;
+
+}
+
+.skillsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.title {
+    background-color: aquamarine;
+}
+
+.skills {
+    border: 1px solid;
+    width: 100%;
+}
