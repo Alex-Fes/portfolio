@@ -1,4 +1,18 @@
 .skill {
     width: 200px;
     background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+
+
+}
+.description {
+
 }

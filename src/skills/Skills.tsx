@@ -8,10 +8,11 @@ function Skills() {
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <h2 className={style.title}>Skills</h2>
-                <div className={style.skills}></div>
-                <Skill/>
-                <Skill/>
-                <Skill/>
+                <div className={style.skills}>
+                    <Skill title={'React'} description={'text description' }/>
+                    <Skill title={'JS'} description={'text description text description text description text description text description text description'}/>
+                    <Skill title={'CSS'} description={'text description'}/>
+                </div>
             </div>
         </div>
     )
