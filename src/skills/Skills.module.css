@@ -1,7 +1,7 @@
 .skillsBlock {
     /*vh - видимая высота экрана*/
     height: 100vh;
-    background-color: beige;
+    background-color: #1d1b19;
 
 }
 
@@ -10,9 +10,9 @@
     justify-content: flex-start;
 }
 
-.title {
-    background-color: aquamarine;
-}
+/*.title {*/
+/*    background-color: aquamarine;*/
+/*}*/
 
 .skills {
     border: 1px solid;

@@ -1,0 +1,25 @@
+.title {
+    /*background-color: #e2992b;*/
+    margin-bottom: 34px;
+    position: relative;
+}
+.title h2 {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+    color: #ddd;
+}
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    height: 2px;
+    background-color: rgba(255,255,255,.2);
+    width: 160px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
