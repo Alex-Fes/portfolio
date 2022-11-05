@@ -1,0 +1,27 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.title {
+  /*background-color: #e2992b;*/
+  margin-bottom: 34px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    height: 2px;
+    background-color: $textColorForSection;
+    width: 160px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  & h2 {
+    @include text($fontFamily, 48px, 400, 1.2, 0, $textColorForSection);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+

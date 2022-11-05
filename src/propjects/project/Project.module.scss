@@ -1,0 +1,80 @@
+@import "src/common/styles/sass/variables";
+.project {
+  width: 450px;
+  background-color: $bgSecondColor;
+  display: flex;
+  flex-direction: column;
+
+  .picture {
+    height: 300px;
+    border: 1px solid;
+    background-color: #b8beac;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #000000;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.2;
+    }
+
+    .viewBtn {
+      background-color: $bgColorForBtn;
+      font-family: 'Jost', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+  .projectInfo {
+    padding: 25px 20px;
+
+    .projectTitle {
+      font-family: 'Jost', sans-serif;
+      color: $textColorForTitle;
+      font-size: 30px;
+      letter-spacing: 0;
+      margin: 5px 0 0 5px;
+      font-weight: 400;
+      line-height: 1.2;
+      background: transparent;
+      vertical-align: baseline;
+      outline: none;
+    }
+
+    .description {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      line-height: 1.44;
+      letter-spacing: 0;
+      font-weight: 400;
+      color: $titleColorForDescription;
+      word-break: break-word;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
