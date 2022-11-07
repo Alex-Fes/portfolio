@@ -1,0 +1,12 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.main {
+  //border: 1px solid #1d1db2;
+  width: 300px;
+  @include flexMain(flex, row, space-between, center);
+
+  & a {
+    @include text($fontFamily, 16px, 400, 1.2, 0, $textColorForSection);
+  }
+}

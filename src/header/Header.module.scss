@@ -1,0 +1,12 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.header {
+  height: 80px;
+  background-color: $bgColor;
+  @include flexMain(flex, row, space-around, center);
+
+  & h4 {
+    @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
+  }
+}
