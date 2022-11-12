@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './SocialMedia.module.css'
+import style from './SocialMedia.module.scss'
 
 
 

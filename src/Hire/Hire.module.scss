@@ -1,0 +1,39 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.hireBlock {
+  background-color: $bgColor;
+
+  .hireContainer {
+    @include flexMain(flex, column, space-around, center);
+
+    .title {
+      background-color: $bgColor;
+    }
+
+    & h2 {
+      @include text($fontFamily, 40px, 300, 1.2, 1.5px, $textColorForSection);
+    }
+    & a {
+      color: #888888;
+    }
+
+
+    .hireBtn {
+      background-color:$textColorForTitle ;
+      font-family: $fontFamily;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+}
+
+
+

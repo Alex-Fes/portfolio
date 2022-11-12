@@ -1,0 +1,27 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
+.skillsBlock {
+  /*vh - видимая высота экрана*/
+  height: 100vh;
+  background-color: $bgColor;
+
+  .skillsContainer {
+    @include flexMain(flex, column, flex-start, center);
+  }
+
+  .skills {
+    border: 1px solid;
+    width: 100%;
+    @include flexMain(flex, row, space-around, center);
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/*.title {*/
+/*    background-color: aquamarine;*/
+/*}*/
+

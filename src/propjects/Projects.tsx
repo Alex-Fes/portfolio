@@ -7,10 +7,10 @@ import todoImage from "./../assets/image/todolist.jpg"
 import socialImage from "./../assets/image/socialNetwork.jpg"
 
 
+
 export type styleObjType = {
     backgroundImage: string
 }
-
 
 function Projects() {
     const socialNetwork: styleObjType = {
@@ -20,6 +20,7 @@ function Projects() {
     const todolist: styleObjType = {
         backgroundImage: `url(${todoImage})`
     };
+
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectContainer}`}>

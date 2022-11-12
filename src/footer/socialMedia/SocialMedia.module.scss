@@ -1,0 +1,17 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
+.social {
+  background-color: $bgSecondColor;
+  @include flexMain(flex, row, space-between, center);
+
+  .icon {
+    border: 1px solid;
+    height: 50px;
+    width: 50px;
+
+  }
+}
+
+

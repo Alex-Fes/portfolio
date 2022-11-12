@@ -1,0 +1,85 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
+.contactsBlock {
+  background-color: $bgColor;
+
+  .contactsContainer {
+    @include flexMain(flex, column, space-around, center);
+    //.title {
+    //
+    //}
+    .secondContactsContainer {
+      border: 1px solid;
+      @include flexMain(flex, row, space-between, center);
+
+      .myContacts {
+        @include flexMain(flex, row, space-between, center);
+        width: 30%;
+        border: 1px solid;
+      }
+
+      .sendMeMessage {
+        @include flexMain(flex, column, flex-start, flex-start);
+        width: 100%;
+
+        .formArea {
+
+          border: 1px solid;
+          flex-wrap: wrap;
+          @media screen and (max-width: 450px) {
+            .formArea {
+              width: 100%;
+            }
+          }
+
+          & input {
+            background-color: $bgSecondColor;
+            border: 1px solid;
+            height: 46px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            border-radius: 30px;
+            @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
+          }
+
+          & textarea {
+            background-color: $bgSecondColor;
+            border: 1px solid;
+            width: 70%;
+            height: 100px;
+            padding: 12px 0 10px 55px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
+          }
+        }
+
+        .button {
+          background-color: $textColorForTitle;
+          font-family: $fontFamily;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          padding: 10px 20px;
+          border-radius: 10px;
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
