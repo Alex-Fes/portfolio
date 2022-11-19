@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className={style.header}>
             <h4>Portfolio</h4>
-            <Navigation/>
+                <Navigation/>
         </div>
     )
 }

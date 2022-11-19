@@ -9,19 +9,25 @@
 
   .skillsContainer {
     @include flexMain(flex, column, flex-start, center);
+
+    .skills {
+      border: 1px solid;
+      width: 100%;
+      @include flexMain(flex, row, space-around, center);
+      flex-wrap: wrap;
+    }
+
+    //.infographic {
+    //  @include flexMain(flex, column, space-around, center);
+    //  border: 1px solid;
+    //
+    //  & h4 {
+    //    @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
+    //  }
+    //}
+
   }
 
-  .skills {
-    border: 1px solid;
-    width: 100%;
-    @include flexMain(flex, row, space-around, center);
-    flex-wrap: wrap;
-  }
 
 }
-//for update
-
-/*.title {*/
-/*    background-color: aquamarine;*/
-/*}*/
 

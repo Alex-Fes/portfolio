@@ -7,20 +7,34 @@
 
   .footerContainer {
     @include flexMain(flex, column, flex-start, center);
+
+    & h2 {
+      @include text($fontFamily, 40px, 300, 1.2, 1.5px, $textColorForSection);
+      @media screen and (max-width: 315px) {
+        background: transparent;
+        vertical-align: baseline;
+        outline: none;
+        word-break: break-word;
+        text-align: center;
+      }
+    }
+
+    .footer {
+      width: 250px;
+      background-color: $bgColor;
+      //border: 1px solid;
+      @include flexMain(flex, row, space-between, center);
+      @media screen and (max-width: 315px) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+
+    & h6 {
+      @include text($fontFamily, 12px, 200, 1.2, 1.1px, $textColorForSection);
+    }
+
   }
 
-  & h2 {
-    @include text($fontFamily, 40px, 300, 1.2, 1.5px, $textColorForSection);
-  }
 
-  & h6 {
-    @include text($fontFamily, 12px, 200, 1.2, 1.1px, $textColorForSection);
-  }
-
-  .footer {
-    width: 250px;
-    background-color:$bgColor;
-    //border: 1px solid;
-    @include flexMain(flex, row, space-between, center);
-  }
 }

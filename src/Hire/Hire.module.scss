@@ -12,15 +12,19 @@
     }
 
     & h2 {
+      @media screen and (max-width: 550px) {
+        text-align: center;
+      }
       @include text($fontFamily, 40px, 300, 1.2, 1.5px, $textColorForSection);
     }
+
     & a {
       color: #888888;
+
     }
 
-
     .hireBtn {
-      background-color:$textColorForTitle ;
+      background-color: $textColorForTitle;
       font-family: $fontFamily;
       font-size: 18px;
       font-weight: 600;
@@ -29,6 +33,7 @@
       border-radius: 10px;
       position: relative;
       z-index: 1;
+      margin-bottom: 30px;
     }
   }
 

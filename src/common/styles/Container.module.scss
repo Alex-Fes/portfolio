@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  @media screen and (max-width: 315px) {
+    background: transparent;
+    vertical-align: baseline;
+    outline: none;
+    word-break: break-word;
+    //text-align: center;
+  }
+}

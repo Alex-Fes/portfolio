@@ -6,6 +6,7 @@
   background-color: $bgSecondColor;
   @include flexMain(flex, row, space-between, center);
 
+
   .icon {
     border: 1px solid;
     height: 50px;
