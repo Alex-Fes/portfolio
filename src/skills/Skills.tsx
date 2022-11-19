@@ -13,6 +13,9 @@ function Skills() {
                     <Skill title={'React'} description={'text description' }/>
                     <Skill title={'JS'} description={'text description text description text description text description text description text description'}/>
                     <Skill title={'CSS'} description={'text description'}/>
+                </div>
+                <div className={style.skills}>
+                   <span>Information</span>
 
                 </div>
             </div>
