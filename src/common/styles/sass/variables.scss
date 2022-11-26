@@ -6,3 +6,22 @@ $bgSecondColor: #181715;
 $bgColorForBtn: #d8ccbe82;
 //$bgColorForLink: #ddd;
 $fontFamily: 'Jost', sans-serif;
+
+
+@keyframes progress_animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes tab_animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

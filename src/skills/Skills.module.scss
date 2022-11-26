@@ -7,27 +7,171 @@
   height: 100vh;
   background-color: $bgColor;
 
+
   .skillsContainer {
     @include flexMain(flex, column, flex-start, center);
+
 
     .skills {
       border: 1px solid;
       width: 100%;
       @include flexMain(flex, row, space-around, center);
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: flex-start;
       flex-wrap: wrap;
     }
 
-    //.infographic {
-    //  @include flexMain(flex, column, space-around, center);
-    //  border: 1px solid;
-    //
-    //  & h4 {
-    //    @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
-    //  }
-    //}
+    .infographic {
+      @include flexMain(flex, column, space-around, center);
+      border: 1px solid;
+      margin-top: 30px;
+      width: 100%;
+      //-webkit-animation: tab_animation 1s ease;
+
+
+      & h4 {
+        @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
+      }
+
+      .skillBar {
+        // border: 1px solid;
+        width: 80%;
+        margin-bottom: 36px;
+        @include flexMain(flex, column, space-around, center);
+        //-webkit-animation: tab_animation 1s ease;
+
+        .progressItem {
+          width: 100%;
+          float: left;
+          clear: both;
+          margin-bottom: 17px;
+          //animation: tab_animation 1s ease;
+         // animation-duration: 1s;
+         // animation-timing-function: ease;
+         // animation-delay: 0s;
+         // animation-iteration-count: 1;
+         // animation-direction: normal;
+         // animation-fill-mode: none;
+         // animation-play-state: running;
+         // animation-name: tab_animation;
+
+          .itemIn {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            & h3 {
+              margin: 0;
+              font-size: 18px;
+              font-weight: 400;
+              position: relative;
+              z-index: 2;
+              line-height: 40px;
+              color: #888;
+              margin-bottom: 1px;
+              //padding: 0;
+              //vertical-align: baseline;
+              //outline: none;
+              //background: transparent;
+              //border: 0;
+              //background: transparent;
+              //border: 0;
+              //
+              //padding: 0;
+              //vertical-align: baseline;
+              //outline: none;
+            }
+
+            & span {
+              position: absolute;
+              z-index: 2;
+              padding: 0 8px;
+              line-height: 24px;
+              font-size: 14px;
+              font-weight: 400;
+              display: block;
+              bottom: 10px;
+              //right: 100%;
+              color: var(--mc);
+              background-color: rgba(255, 255, 255, .05);
+
+
+
+              transition: all 3s cubic-bezier(.165,.84,.44,1);
+              //transition-duration: 3s;
+              //transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+              //transition-delay: 0s;
+              //transition-property: all;
+              transform: translateX(50%);
+              right: 20%;
+
+              &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                display: block;
+                border: 4px solid transparent;
+                border-top-color: rgba(255, 255, 255, .05);
+                bottom: -8px;
+                left: 50%;
+                margin-left: -4px;
+              }
+            }
+          }
+        }
+
+        .bgWrap {
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          height: 1px;
+          background-color: #5e5252;
+        }
+
+        .progressBg {
+          width: 80%;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          --mc: #987750;
+          background-color: var(--mc);
+          -webkit-animation: progress_animation 3s cubic-bezier(.165, .84, .44, 1);
+
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+
+
+            //-webkit-animation: progress_animation 3s cubic-bezier(.165, .84, .44, 1);
+            //animation-duration: 3s;
+            //animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            //animation-delay: 0s;
+            //animation-iteration-count: 1;
+            //animation-direction: normal;
+            //animation-fill-mode: none;
+            //animation-play-state: running;
+            //animation-name: progress_animation;
+
+
+
+
+            //background-color: var(--mc);
+          }
+        }
+      }
+
+    }
 
   }
-
-
 }
+
+
 
