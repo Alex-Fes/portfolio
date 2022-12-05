@@ -22,6 +22,7 @@
     .footer {
       width: 250px;
       background-color: $bgColor;
+
       //border: 1px solid;
       @include flexMain(flex, row, space-between, center);
       @media screen and (max-width: 315px) {

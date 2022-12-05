@@ -1,16 +1,20 @@
 import React from 'react';
 import style from './SocialMedia.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact } from '@fortawesome/free-brands-svg-icons'
+import {styleObjType} from "../../propjects/Projects";
 
 
+export type SocialMediaType = {
+    style: styleObjType
+    url: string
+}
 
-function SocialMedia() {
+function SocialMedia(props: SocialMediaType) {
     return (
         <div className={style.social}>
-            <div className={style.icon}>
-                <FontAwesomeIcon icon="fa-brands fa-facebook" />
+            <a href={props.url}>
+            <div  style={props.style} className={style.icon}>
             </div>
+            </a>
         </div>
     )
 }
