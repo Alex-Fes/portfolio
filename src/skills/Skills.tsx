@@ -3,47 +3,86 @@ import style from './Skills.module.scss'
 import styleContainer from "../common/styles/Container.module.scss";
 import Skill from "./skill/Skill";
 import Title from "../common/components/title/Title";
+import storybookImg from '../assets/image/storybook.svg'
+import jsImg from '../assets/image/js.svg'
+import cssImg from '../assets/image/css-file.svg'
+import htmlImg from '../assets/image/html5.svg'
+import reduxImg from '../assets/image/redux1.svg'
+import reactImg from '../assets/image/react.svg'
+import {styleObjType} from "../propjects/Projects";
+import {InfoSkill} from "./infoSkill/InfoSkill";
+
+
+export type skillObjType = {
+    backgroundImage: string
+    width: number
+    description: string
+}
+
 
 function Skills() {
+
+    const html: skillObjType = {
+        backgroundImage: `${htmlImg}`,
+        width: 90,
+        description: 'Description Description Description Description Description Description ' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
+    const css: skillObjType = {
+        backgroundImage: `${cssImg}`,
+        width: 92,
+        description: 'Description Description Description Description Description Description ' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
+    const javaScript: skillObjType = {
+        backgroundImage: `${jsImg}`,
+        width: 85,
+        description: 'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
+    const react: skillObjType = {
+        backgroundImage: `${reactImg}`,
+        width: 95,
+        description: 'Description Description Description Description Description Description ' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
+    const redux: skillObjType = {
+        backgroundImage: `${reduxImg}`,
+        width: 92,
+        description: 'Description Description Description Description Description Description ' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
+    const storybook: skillObjType = {
+        backgroundImage: `${storybookImg}`,
+        width: 80,
+        description: 'Description Description Description Description Description Description ' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description' +
+            'Description Description Description Description Description' +
+            ' Description Description Description Description Description Description Description'
+    };
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title text={'Skills'}/>
-                <div className={style.skills}>
-                    <Skill title={'React'} description={'text description'}/>
-                    <Skill title={'JS'}
-                           description={'text description text description text description text description text description text description'}/>
-                    <Skill title={'CSS'} description={'text description'}/>
-                </div>
-
-
-                <div className={style.infographic}>
-                    <h4>Infographic</h4>
-                    <div className={style.skillBar}>
-                        skill bar
-
-
-                        <div className={style.progressItem}>
-                            <div className={style.itemIn}>
-                                <h3>React</h3>
-                                <span > "80%"</span>
-                            </div>
-                        </div>
-                        <div className={style.bgWrap}>
-                            <div className={style.progressBg}>
-
-                            </div>
-                        </div>
-
-
-
-
-
-
-                    </div>
-
-
-                </div>
+                <InfoSkill title={'HTML'} style={html}/>
+                <InfoSkill title={'CSS'} style={css}/>
+                <InfoSkill title={'JavaScript'} style={javaScript}/>
+                <InfoSkill title={'React'} style={react}/>
+                <InfoSkill title={'Redux'} style={redux}/>
+                <InfoSkill title={'Storybook'} style={storybook}/>
 
             </div>
         </div>
