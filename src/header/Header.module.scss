@@ -3,10 +3,14 @@
 
 .header {
   height: 80px;
-  background-color: $bgColor;
+  width: 100%;
+  //background-color: $bgSecondColor;
+  background: linear-gradient(to bottom, $bgSecondColor, $bgColor);
+  position: fixed;
+  z-index: 1000;
   @include flexMain(flex, row, space-around, center);
   @media screen and (max-width: 500px) {
-   flex-direction: column;
+    flex-direction: column;
     height: 130px;
   }
 

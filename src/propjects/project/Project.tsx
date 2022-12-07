@@ -4,20 +4,19 @@ import {styleObjType} from "../Projects";
 
 
 type ProjectPropsType = {
-    title: string
-    description: string
     style: styleObjType
 }
 
 function Project(props: ProjectPropsType) {
     return (
         <div className={style.project}>
-            <div style={props.style} className={style.picture}>
-                <a href="" className={style.viewBtn}>Watch</a>
-            </div>
+
+                <a style={{backgroundImage: props.style.backgroundImage}}
+                   href="" className={style.picture}></a>
+
             <div className={style.projectInfo}>
-                <h3 className={style.projectTitle}>{props.title}</h3>
-                <span className={style.description}>{props.description}</span>
+                <h3 className={style.projectTitle}>{props.style.title}</h3>
+                <span className={style.description}>{props.style.description}</span>
             </div>
         </div>
     )

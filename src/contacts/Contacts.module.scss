@@ -8,19 +8,18 @@
   .contactsContainer {
 
     .secondContactsContainer {
-      border: 1px solid;
+      // border: 1px solid;
       width: 100%;
       @include flexMain(flex, row, center, stretch);
       @media screen and (max-width: 650px) {
         flex-direction: column;
       }
 
-
       .myContacts {
         @include flexMain(flex, column, space-between, center);
 
         width: auto;
-        border: 1px solid;
+        // border: 1px solid;
 
         & span {
           @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
@@ -72,12 +71,13 @@
 
         .formArea {
           @include flexMain(flex, row, space-between, flex-start);
-          border: 1px solid;
+          // border: 1px solid;
           flex-wrap: wrap;
+
 
           & input {
             background-color: $bgSecondColor;
-            border: 1px solid;
+            border: 1px;
             height: 46px;
             width: 40%;
             padding-left: 20px;
@@ -91,12 +91,13 @@
 
           & textarea {
             background-color: $bgSecondColor;
-            border: 1px solid;
+            border: 1px;
             width: 100%;
             height: 100px;
             padding: 12px 0 10px 20px;
             border-radius: 30px;
             margin-bottom: 15px;
+            resize: none;
             @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
             @media screen and (max-width: 650px) {
               width: 100%;
@@ -105,15 +106,14 @@
         }
 
         .button {
-          background-color: $textColorForTitle;
-          font-family: $fontFamily;
-          font-size: 18px;
-          font-weight: 600;
-          letter-spacing: 1px;
+          background-color: $bgColorForFooterIcon;
+          @include text($fontFamily, 18px, 600, 1, 1px, $bgSecondColor);
           padding: 10px 20px;
           border-radius: 10px;
+          border: $bgColor;
           position: relative;
           z-index: 1;
+          margin-bottom: 30px;
         }
       }
     }

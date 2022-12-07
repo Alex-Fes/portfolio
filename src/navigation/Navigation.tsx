@@ -6,9 +6,9 @@ function Navigation() {
         <div className={style.main}>
 
             <a href='#' >About</a>
-            <a href='#' >Contact</a>
-            <a href='#' >Projects</a>
-            <a href='#' >Skills</a>
+            <a href='#skills' >Skills</a>
+            <a href='#projects' >Projects</a>
+            <a href='#contacts' >Contact</a>
         </div>
     )
 }

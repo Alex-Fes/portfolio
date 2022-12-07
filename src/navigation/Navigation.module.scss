@@ -11,7 +11,9 @@
     flex-wrap: wrap;
   }
 
+
   & a {
-    @include text($fontFamily, 16px, 400, 1.2, 0, $textColorForTitle);
+    @include text($fontFamily, 16px, 400, 1.2, 0, $textColorForSection);
+   //transition: all .3s ease;
   }
 }

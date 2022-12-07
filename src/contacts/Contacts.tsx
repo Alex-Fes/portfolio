@@ -6,7 +6,7 @@ import Title from "../common/components/title/Title";
 
 function Contacts() {
     return (
-        <div className={style.contactsBlock}>
+        <div id='contacts' className={style.contactsBlock}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <Title text={'Contacts'}/>
                 <div className={style.secondContactsContainer}>
@@ -21,8 +21,9 @@ function Contacts() {
                             </li>
                             <li>
                                 <h6>
+                                    <img src="" alt=""/>
                                     <span>email</span><br/>
-                                    <i></i>
+
                                     <span>example@gmail.com</span>
                                 </h6>
                             </li>
@@ -42,15 +43,21 @@ function Contacts() {
                             </li>
                         </ul>
                     </div>
+
                     <div className={style.sendMeMessage}>
                         <form className={style.formArea}>
+
                             <input type="text" value={'Your name'}/>
                             <input type="text" value={'Your email'}/>
                             <textarea value={"Your message"}/>
                         </form>
+
                         <div>
+
                             <button type="submit" className={style.button}>Send</button>
+
                         </div>
+
                     </div>
                 </div>
 

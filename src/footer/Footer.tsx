@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Footer.module.scss'
 import styleContainer from "../common/styles/Container.module.scss";
 import SocialMedia from "./socialMedia/SocialMedia";
-import fbImg from "../assets/image/facebook-social.svg";
+import fbImg from "../assets/image/facebook.svg";
 import twiImg from "../assets/image/twitter-social.svg";
 import gitImg from "../assets/image/github2.svg";
 import linkedinImg from "../assets/image/linkedin-social.svg";

@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './SocialMedia.module.scss'
-import {styleObjType} from "../../propjects/Projects";
+import {styleSocialObjType} from "../Footer";
 
 
 export type SocialMediaType = {
-    style: styleObjType
+    style: styleSocialObjType
     url: string
 }
 

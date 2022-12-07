@@ -10,22 +10,21 @@ type InfoSkillPropsType = {
 }
 
 
-
 export const InfoSkill = (props: InfoSkillPropsType) => {
-    return(
+    return (
         <div className={style.infographic}>
 
             <div className={style.skillBar}>
 
-                <div  className={style.progressItem}>
+                <div className={style.progressItem}>
                     <div className={style.itemIn}>
 
                         <div className={style.description}>
 
-                           <p>
-                               <img src={props.style.backgroundImage}/>
-                               {props.style.description}
-                           </p>
+                            <p>
+                                <img src={props.style.backgroundImage}/>
+                                {props.style.description}
+                            </p>
 
                         </div>
 
@@ -36,7 +35,7 @@ export const InfoSkill = (props: InfoSkillPropsType) => {
                         </div>
                     </div>
                     <div className={style.bgWrap}>
-                        <div  className={style.progressBg} style={{width: `${props.style.width}%`}}>
+                        <div className={style.progressBg} style={{width: `${props.style.width}%`}}>
                         </div>
                     </div>
 

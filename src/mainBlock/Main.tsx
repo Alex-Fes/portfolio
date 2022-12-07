@@ -6,8 +6,12 @@ import {styleObjType} from "../propjects/Projects";
 
 
 
+type mainObjType = {
+    backgroundImage: string
+}
+
 function Main() {
-    const myFoto: styleObjType = {
+    const myFoto: mainObjType = {
         backgroundImage: `url(${myfoto})`
     }
     return (

@@ -6,7 +6,7 @@ import Skills from "./skills/Skills";
 import Projects from "./propjects/Projects";
 import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
-import Hire from "./Hire/Hire";
+import Hire from "./hire/Hire";
 
 function App() {
     return (<>

@@ -19,18 +19,16 @@
     }
 
     & a {
-      color: #888888;
-
+      color: $bgColor;
+      text-decoration: none;
     }
 
     .hireBtn {
-      background-color: $textColorForTitle;
-      font-family: $fontFamily;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      background-color: $bgColorForFooterIcon;
+      @include text($fontFamily, 18px, 600, 1, 1px, $bgSecondColor);
       padding: 10px 20px;
       border-radius: 10px;
+      border: $bgColor;
       position: relative;
       z-index: 1;
       margin-bottom: 30px;

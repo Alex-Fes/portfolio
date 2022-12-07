@@ -3,19 +3,15 @@
 
 
 .infographicBlock {
-
   border: 1px solid;
   width: 100%;
   @include flexMain(flex, column, space-around, center);
 
   .item {
-
     //flex-wrap: wrap;
   }
 
-
   & h6 {
-
     @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
   }
 }
