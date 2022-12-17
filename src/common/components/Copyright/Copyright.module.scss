@@ -1,0 +1,15 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.href {
+  @include text($fontFamily, 12px, 200, 1.2, 1.1px, $titleColorForDescription);
+  text-decoration: none;
+
+  .link {
+    text-decoration: none;
+  }
+
+  & h5 {
+    @include text($fontFamily, 12px, 200, 1.2, 1.1px, $titleColorForDescription);
+  }
+}

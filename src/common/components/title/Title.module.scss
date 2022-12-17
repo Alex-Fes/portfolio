@@ -2,9 +2,8 @@
 @import "src/common/styles/sass/mixins";
 
 .title {
-  /*background-color: #e2992b;*/
-  margin-bottom: 34px;
   position: relative;
+  margin-top: 20px;
 
   &::after {
     content: '';

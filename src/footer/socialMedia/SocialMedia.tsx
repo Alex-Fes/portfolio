@@ -4,16 +4,19 @@ import {styleSocialObjType} from "../Footer";
 
 
 export type SocialMediaType = {
-    style: styleSocialObjType
-    url: string
+    data: styleSocialObjType
+    // url: string
 }
 
 function SocialMedia(props: SocialMediaType) {
     return (
         <div className={style.social}>
-            <a href={props.url}>
-            <div  style={props.style} className={style.icon}>
-            </div>
+            <a href={props.data.url}>
+                <div className={style.icon}>
+                    <img src={props.data.backgroundImage}
+                        // style={{backgroundImage: props.data.backgroundImage}}
+                        alt=""/>
+                </div>
             </a>
         </div>
     )

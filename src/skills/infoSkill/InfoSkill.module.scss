@@ -4,8 +4,8 @@
 
 .infographic {
   @include flexMain(flex, column, space-around, center);
-  border: 1px solid;
-  margin-top: 30px;
+
+  margin-top: 50px;
   width: 100%;
 
   & h4 {
@@ -61,6 +61,8 @@
               background-size: cover;
               background-position: center;
               background-color: $bgColorForFooterIcon;
+              padding: 5px;
+              box-sizing: border-box;
             }
           }
         }

@@ -3,12 +3,14 @@
 
 
 .contactsBlock {
-  background-color: $bgColor;
+  background-color: $bgColor2;
 
   .contactsContainer {
 
+
     .secondContactsContainer {
       // border: 1px solid;
+      margin-top: 50px;
       width: 100%;
       @include flexMain(flex, row, center, stretch);
       @media screen and (max-width: 650px) {

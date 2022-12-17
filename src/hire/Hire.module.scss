@@ -2,13 +2,16 @@
 @import "src/common/styles/sass/mixins";
 
 .hireBlock {
-  background-color: $bgColor;
+  background-color: $bgColor2;
+  //height: 30vh;
+  //margin-bottom: 30px;
 
   .hireContainer {
     @include flexMain(flex, column, space-around, center);
 
+
     .title {
-      background-color: $bgColor;
+      background-color: $bgColor2;
     }
 
     & h2 {

@@ -4,18 +4,30 @@
 
 .social {
   background-color: $bgSecondColor;
+
+
   @include flexMain(flex, row, space-between, center);
-    & a {
 
-    }
+  & a {
+    .icon {
+      height: 55px;
+      width: 55px;
+      background-color: $bgColorForFooterIcon;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  .icon {
-    height: 50px;
-    width: 50px;
-    background-color: $bgColorForFooterIcon;
-    border-radius: 6px;
-    background-size: cover;
-    background-position: center;
+
+
+      & img {
+        height: 50px;
+        width: 50px;
+      }
+
+  }
+
+
   }
 }
 
