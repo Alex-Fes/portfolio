@@ -16,10 +16,8 @@ export const InfoSkill = (props: InfoSkillPropsType) => {
         <div className={style.progressItem}>
           <div className={style.itemIn}>
             <div className={style.description}>
-              <p>
-                <img src={props.style.backgroundImage} alt="" />
-                {props.style.description}
-              </p>
+              {/*<img src={props.style.backgroundImage} alt="" />*/}
+              {/*<p>{props.style.description}</p>*/}
             </div>
 
             <h3>{props.title}</h3>
