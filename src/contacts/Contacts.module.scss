@@ -7,13 +7,11 @@
 
   .contactsContainer {
 
-
     .secondContactsContainer {
-      // border: 1px solid;
       margin-top: 50px;
       width: 100%;
       @include flexMain(flex, row, center, stretch);
-      @media screen and (max-width: 650px) {
+      @media screen and (max-width: 993px) {
         flex-direction: column;
       }
 
@@ -21,7 +19,10 @@
         @include flexMain(flex, column, space-between, center);
 
         width: auto;
-        // border: 1px solid;
+
+        @media screen and (max-width: 993px) {
+          @include flexMain(flex, row, center, center);
+        }
 
         & span {
           @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
@@ -30,22 +31,40 @@
         & ul {
           list-style: none;
           padding: 0;
-          margin-top: -10px;
-          //@media screen and (max-width: 650px) {
-          //   @include flexMain(flex, row, space-around, center);
-          //  margin: 0; /* Обнуляем значение отступов */
-          //  padding: 4px; /* Значение полей */
-          //}
+          margin-top: 4px;
+
+          @media screen and (max-width: 993px) {
+             @include flexMain(flex, row, space-around, center);
+            margin: 0; /* Обнуляем значение отступов */
+            padding: 4px; /* Значение полей */
+            flex-wrap: wrap;
+          }
         }
 
         & li {
           padding-bottom: 15px;
           position: relative;
-          //@media screen and (max-width: 650px) {
-          //  display: inline; /* Отображать как строчный элемент */
-          //  margin-right: 15px; /* Отступ слева */
-          //  padding: 3px; /* Поля вокруг текста */
-          //}
+          @media screen and (max-width: 993px) {
+            display: inline; /* Отображать как строчный элемент */
+            margin-right: 15px; /* Отступ слева */
+            padding: 3px; /* Поля вокруг текста */
+
+          }
+          & a {
+            text-decoration: none;
+          }
+        }
+        & img {
+          width: 20px;
+          height: 20px;
+          margin-right: 3px;
+          margin-bottom: -1px;
+        }
+        & img {
+          width: 20px;
+          height: 20px;
+          margin-right: 3px;
+          margin-bottom: -1px;
         }
 
         & h6 {
@@ -65,7 +84,7 @@
       .sendMeMessage {
         @include flexMain(flex, column, flex-start, flex-start);
         margin-left: 30px;
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 993px) {
           width: 100%;
           align-items: center;
           margin: 0;
@@ -73,7 +92,6 @@
 
         .formArea {
           @include flexMain(flex, row, space-between, flex-start);
-          // border: 1px solid;
           flex-wrap: wrap;
 
 
@@ -86,7 +104,7 @@
             margin-bottom: 20px;
             border-radius: 30px;
             @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 993px) {
               width: 100%;
             }
           }
@@ -101,7 +119,7 @@
             margin-bottom: 15px;
             resize: none;
             @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 993px) {
               width: 100%;
             }
           }
