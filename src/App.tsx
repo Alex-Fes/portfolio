@@ -5,7 +5,6 @@ import './App.css'
 import Contacts from './contacts/Contacts'
 import Footer from './footer/Footer'
 import Header from './header/Header'
-import Hire from './hire/Hire'
 import Main from './mainBlock/Main'
 import Projects from './propjects/Projects'
 import Skills from './skills/Skills'
@@ -17,7 +16,7 @@ function App() {
       <Main />
       <Skills />
       <Projects />
-      <Hire />
+      {/*<Hire />*/}
       <Contacts />
       <Footer />
     </>
