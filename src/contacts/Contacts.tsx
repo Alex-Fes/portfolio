@@ -1,5 +1,10 @@
 import React from 'react'
 
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import facebook from '../assets/image/facebook-svgrepo.svg'
+import linkedin from '../assets/image/linkedin-svgrepo-com.svg'
 import Title from '../common/components/title/Title'
 import styleContainer from '../common/styles/Container.module.scss'
 
@@ -14,46 +19,36 @@ function Contacts() {
           <div className={style.myContacts}>
             <ul>
               <li>
-                <h6>
-                  <span>Phone</span>
-                  <br />
-                  <i></i>
-                  <span>12121212</span>
-                </h6>
+                <FontAwesomeIcon icon={faPhone} style={{ color: '#987750', marginRight: '7px' }} />
+                <span>+381 61 6563152</span>
               </li>
               <li>
-                <h6>
-                  <img src="" alt="" />
-                  <span>email</span>
-                  <br />
-
-                  <span>example@gmail.com</span>
-                </h6>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ color: '#987750', marginRight: '7px' }}
+                />
+                <span>aleksei.fesenko86@gmail.com</span>
               </li>
               <li>
-                <h6>
-                  <span>facebook</span>
-                  <br />
-                  <i></i>
-                  <span>address</span>
-                </h6>
+                <img src={facebook} alt="facebook" />
+                <a href="https://www.facebook.com/aleksei.fesenko.75">
+                  <span>Facebook</span>
+                </a>
               </li>
               <li>
-                <h6>
-                  <span>linkedin</span>
-                  <br />
-                  <i></i>
-                  <span>address</span>
-                </h6>
+                <img src={linkedin} alt="linkedin" />
+                <a href="https://www.linkedin.com/in/oleksii-fes/">
+                  <span>Linkedin</span>
+                </a>
               </li>
             </ul>
           </div>
 
           <div className={style.sendMeMessage}>
             <form className={style.formArea}>
-              <input type="text" value={'Your name'} />
-              <input type="text" value={'Your email'} />
-              <textarea value={'Your message'} />
+              <input type="text" placeholder={'Your name'} />
+              <input type="email" placeholder={'Your email'} />
+              <textarea placeholder={'Your message'} />
             </form>
 
             <div>
