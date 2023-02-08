@@ -46,7 +46,7 @@ function Skills() {
   }
   const react: skillObjType = {
     backgroundImage: `${reactImg}`,
-    width: 95,
+    width: 91,
     description:
       'Description Description Description Description Description Description ' +
       'Description Description Description Description Description' +
@@ -60,7 +60,7 @@ function Skills() {
       'Description Description Description Description Description' +
       ' Description Description Description Description Description Description Description',
   }
-  const storybook: skillObjType = {
+  const typescript: skillObjType = {
     backgroundImage: `${storybookImg}`,
     width: 80,
     description:
@@ -73,13 +73,14 @@ function Skills() {
     <div id="skills" className={style.skillsBlock}>
       <div className={`${styleContainer.container} ${style.skillsContainer}`}>
         <Title text={'Skills'} />
-
-        <InfoSkill title={'HTML'} style={html} />
-        <InfoSkill title={'CSS'} style={css} />
-        <InfoSkill title={'JavaScript'} style={javaScript} />
-        <InfoSkill title={'React'} style={react} />
-        <InfoSkill title={'Redux'} style={redux} />
-        <InfoSkill title={'Storybook'} style={storybook} />
+        <div className={style.skills}>
+          <InfoSkill title={'HTML'} style={html} />
+          <InfoSkill title={'CSS'} style={css} />
+          <InfoSkill title={'JAVASCRIPT'} style={javaScript} />
+          <InfoSkill title={'REACT'} style={react} />
+          <InfoSkill title={'REDUX'} style={redux} />
+          <InfoSkill title={'TYPESCRIPT'} style={typescript} />
+        </div>
       </div>
     </div>
   )
