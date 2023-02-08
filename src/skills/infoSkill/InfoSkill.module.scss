@@ -3,10 +3,14 @@
 
 
 .infographic {
-  @include flexMain(flex, column, space-around, center);
+  @include flexMain(flex, row, space-around, center);
 
   margin-top: 50px;
-  width: 100%;
+  width: 40%;
+  //padding: 0 15px;
+  @media screen and (max-width: 670px) {
+    width: 100%;
+  }
 
   & h4 {
     @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
@@ -17,15 +21,15 @@
     width: 100%;
     margin-bottom: 36px;
 
-    @include flexMain(flex, column, space-around, center);
+    //@include flexMain(flex, column, space-around, center);
 
 
     .progressItem {
-      width: 80%;
+      width: 100%;
       //position: inherit;
       float: left;
       clear: both;
-      margin-bottom: 17px;
+      //margin-bottom: 17px;
 
 
       .itemIn {
@@ -44,26 +48,27 @@
 
         .description {
           //background-color: $bgSecondColor;
+              width: 100%;
 
-
+          & img {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            float: left; /* Выравнивание по левому краю */
+            margin: 4px 7px 0 4px; /* Отступы вокруг картинки */
+            //padding: 5px;
+            background-size: cover;
+            background-position: center;
+            background-color: $bgColorForFooterIcon;
+            padding: 5px;
+            box-sizing: border-box;
+          }
 
           & p {
             word-break: break-word;
             @include text($fontFamily, 16px, 400, 1.2, 1px, $titleColorForDescription);
 
-            & img {
-              width: 50px;
-              height: 50px;
-              border-radius: 4px;
-              float: left; /* Выравнивание по левому краю */
-              margin: 4px 7px 0 4px; /* Отступы вокруг картинки */
-              //padding: 5px;
-              background-size: cover;
-              background-position: center;
-              background-color: $bgColorForFooterIcon;
-              padding: 5px;
-              box-sizing: border-box;
-            }
+
           }
         }
 
@@ -74,43 +79,23 @@
           top: 0;
           left: 0;
           bottom: 0;
-          // display: block;
-          // -webkit-animation: progress_animation 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+          //transition: all 4s cubic-bezier(.165,.84,.44,1);
+          //animation: progress_animation 3s cubic-bezier(.165,.84,.44,1);
 
           & span {
-            position: absolute;
+           position: absolute;
             z-index: 2;
             padding: 0 8px;
             line-height: 24px;
             font-size: 14px;
             font-weight: 400;
-            // display: block;
             bottom: 10px;
+            //left: 0;
             right: 0;
             background-color: rgba(255, 255, 255, .05);
             color: $bgColorForFooterIcon;
-            // transition: all 3s cubic-bezier(.165,.84,.44,1);
             transform: translateX(50%);
-            // -webkit-animation: progress_animation 3s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-
-            // animation: progress_animation 3s cubic-bezier(.165,.84,.44,1);
-            //animation-duration: 3s;
-            //animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-            //animation-delay: 0s;
-            //animation-iteration-count: 1;
-            //animation-direction: reverse;
-            //animation-fill-mode: none;
-            //animation-play-state: running;
-            //animation-name: progress_animation;
-
-
-            //transition: all 3s cubic-bezier(.165, .84, .44, 1);
-            //transition-duration: 3s;
-            //transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-            //transition-delay: 0s;
-            //transition-property: all;
-
+            //transition: all 3s cubic-bezier(.165,.84,.44,1);
 
             &::after {
               content: '';
@@ -130,11 +115,13 @@
 
 
       .bgWrap {
-        width: 100%;
+        //width: 100%;
         position: relative;
         z-index: 1;
         height: 1px;
         background-color: #5e5252;
+        //transition: all 3s cubic-bezier(.165,.84,.44,1);
+        //animation: progress_animation 3s cubic-bezier(.165,.84,.44,1);
       }
 
       .progressBg {
@@ -146,7 +133,7 @@
         bottom: 0;
         --mc: #987750;
         background-color: var(--mc);
-        // -webkit-animation: progress_animation 3s cubic-bezier(.165, .84, .44, 1);
+
 
         &::after {
           content: '';
@@ -164,7 +151,7 @@
 
 //@keyframes progress_animation {
 //  from {
-//    width: 0%;
+//    width: 0;
 //  }
 //
 //  to {
