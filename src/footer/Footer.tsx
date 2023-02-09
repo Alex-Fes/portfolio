@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Grid } from '@mui/material'
+import { Fade } from 'react-awesome-reveal'
 
 import fbImg from '../assets/image/facebook.svg'
 import gitImg from '../assets/image/github.svg'
@@ -49,14 +50,15 @@ function Footer() {
     <Grid>
       <div className={styles.footerBlock}>
         <div className={`${styleContainer.container} ${styles.footerContainer}`}>
-          {/*<h3>Aleksei Fesenko</h3>*/}
-          <div className={styles.footer}>
-            <SocialMedia data={facebook} />
-            <SocialMedia data={twitter} />
-            <SocialMedia data={gitHub} />
-            <SocialMedia data={linkedin} />
-          </div>
-          <Copyright sx={{ mt: 3 }} />
+          <Fade triggerOnce={false} direction={'up'}>
+            <div className={styles.footer}>
+              <SocialMedia data={facebook} />
+              <SocialMedia data={twitter} />
+              <SocialMedia data={gitHub} />
+              <SocialMedia data={linkedin} />
+            </div>
+            <Copyright sx={{ mt: 3 }} />
+          </Fade>
         </div>
       </div>
     </Grid>

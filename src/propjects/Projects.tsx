@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Fade } from 'react-awesome-reveal'
+
 import Title from '../common/components/title/Title'
 import styleContainer from '../common/styles/Container.module.scss'
 
@@ -7,7 +9,6 @@ import socialImage from './../assets/image/socialNetwork.jpg'
 import todoImage from './../assets/image/todolist.jpg'
 import Project from './project/Project'
 import style from './Projects.module.scss'
-
 export type styleObjType = {
   backgroundImage: string
   title: string
@@ -35,11 +36,20 @@ function Projects() {
   return (
     <div id="projects" className={style.projectsBlock}>
       <div className={`${styleContainer.container} ${style.projectContainer}`}>
-        <Title text={'Projects'} />
+        <Fade triggerOnce={false} direction={'left'}>
+          <Title text={'Projects'} />
+        </Fade>
 
         <div className={style.projects}>
-          <Project style={socialNetwork} />
-          <Project style={todolist} />
+          <Fade triggerOnce={false} direction={'left'}>
+            <Project style={socialNetwork} />
+          </Fade>
+          <Fade triggerOnce={false} direction={'right'}>
+            <Project style={todolist} />
+          </Fade>
+          {/*<Fade triggerOnce={false} direction={'right'}>*/}
+          {/*  <Project style={todolist} />*/}
+          {/*</Fade>*/}
         </div>
       </div>
     </div>

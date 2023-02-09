@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Fade } from 'react-awesome-reveal'
+
 import myfoto from '../assets/image/myFoto1.jpg'
 import styleContainer from '../common/styles/Container.module.scss'
 
@@ -17,14 +19,18 @@ function Main() {
   return (
     <div className={style.main}>
       <div className={`${styleContainer.container} ${style.mainContainer}`}>
-        <div className={style.text}>
-          <span>Hi everyone!</span>
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <h1>I'm Aleksey Fesenko.</h1>
-          <p>It`s my portfolio.</p>
-          <p>I will be a front-end developer.</p>
-        </div>
-        <div style={myFoto} className={style.photo}></div>
+        <Fade triggerOnce={false} direction={'left'}>
+          <div className={style.text}>
+            <span>Hi everyone!</span>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <h1>I'm Aleksey Fesenko.</h1>
+            <p>It`s my portfolio.</p>
+            <p>I will be a front-end developer.</p>
+          </div>
+        </Fade>
+        <Fade triggerOnce={false} direction={'right'}>
+          <div style={myFoto} className={style.photo}></div>
+        </Fade>
       </div>
     </div>
   )
