@@ -50,7 +50,7 @@ function Footer() {
     <Grid>
       <div className={styles.footerBlock}>
         <div className={`${styleContainer.container} ${styles.footerContainer}`}>
-          <Fade triggerOnce={false} direction={'up'}>
+          <Fade triggerOnce={true} direction={'up'}>
             <div className={styles.footer}>
               <SocialMedia data={facebook} />
               <SocialMedia data={twitter} />
