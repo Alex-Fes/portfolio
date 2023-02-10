@@ -36,15 +36,15 @@ function Projects() {
   return (
     <div id="projects" className={style.projectsBlock}>
       <div className={`${styleContainer.container} ${style.projectContainer}`}>
-        <Fade triggerOnce={false} direction={'left'}>
+        <Fade triggerOnce={true} direction={'left'}>
           <Title text={'Projects'} />
         </Fade>
 
         <div className={style.projects}>
-          <Fade triggerOnce={false} direction={'left'}>
+          <Fade triggerOnce={true} direction={'left'}>
             <Project style={socialNetwork} />
           </Fade>
-          <Fade triggerOnce={false} direction={'right'}>
+          <Fade triggerOnce={true} direction={'right'}>
             <Project style={todolist} />
           </Fade>
           {/*<Fade triggerOnce={false} direction={'right'}>*/}
