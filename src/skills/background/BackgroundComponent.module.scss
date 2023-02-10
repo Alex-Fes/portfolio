@@ -1,0 +1,51 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
+.item {
+  //width: 100%;
+  float: left;
+  clear: both;
+  background-color: $bgSecondColor;
+  position: relative;
+  padding: 42px 40px 43px;
+  border: 1px solid #151412;
+
+
+  .itemTop {
+    display: flex;
+    margin-bottom: 14px;
+
+    & h5 {
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 30px;
+      color: #ddd;
+    }
+
+    & span {
+      display: block;
+      padding: 0;
+      font-size: 16px;
+      line-height: 30px;
+      margin: 0 0 0 20px;
+      color: $titleColorForDescription;
+    }
+  }
+
+  & h3 {
+    padding: 0;
+    font-weight: 400;
+    margin: 0 0 17px;
+    color: #ddd;
+  }
+
+  & p {
+    box-sizing: border-box;
+    letter-spacing: 0;
+    @include text($fontFamily, 15px, 400, 1.44, 0, $titleColorForDescription);
+  }
+}
