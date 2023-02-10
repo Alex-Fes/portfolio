@@ -1,86 +1,127 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import cssImg from '../assets/image/css-file.svg'
-import htmlImg from '../assets/image/html5.svg'
-import jsImg from '../assets/image/js.svg'
-import reactImg from '../assets/image/react.svg'
-import reduxImg from '../assets/image/redux1.svg'
-import storybookImg from '../assets/image/storybook.svg'
+import { Fade } from 'react-awesome-reveal'
+
 import Title from '../common/components/title/Title'
 import styleContainer from '../common/styles/Container.module.scss'
 
+import { BackgroundComponent } from './background/BackgroundComponent'
+import {
+  css,
+  educationExp,
+  html,
+  incubatorStudy,
+  instituteStudy,
+  javaScript,
+  partTimeExp,
+  react,
+  redux,
+  typescript,
+} from './data/backgroundData'
 import { InfoSkill } from './infoSkill/InfoSkill'
 import style from './Skills.module.scss'
 
-export type skillObjType = {
-  backgroundImage: string
-  width: number
-  description: string
-}
-
 function Skills() {
-  const html: skillObjType = {
-    backgroundImage: `${htmlImg}`,
-    width: 90,
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
-  }
-  const css: skillObjType = {
-    backgroundImage: `${cssImg}`,
-    width: 92,
+  const [isSkillsShow, setIsSkillsShow] = useState(false)
+  const [isEducationShow, setIsEducationShow] = useState(false)
+  const [isExperienceShow, setIsExperienceShow] = useState(true)
 
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
+  const onSkillShowHandler = () => {
+    setIsSkillsShow(true)
+    setIsEducationShow(false)
+    setIsExperienceShow(false)
   }
-  const javaScript: skillObjType = {
-    backgroundImage: `${jsImg}`,
-    width: 85,
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
+  const onEducationShowHandler = () => {
+    setIsSkillsShow(false)
+    setIsEducationShow(true)
+    setIsExperienceShow(false)
   }
-  const react: skillObjType = {
-    backgroundImage: `${reactImg}`,
-    width: 91,
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
+  const onExperienceShoeHandler = () => {
+    setIsSkillsShow(false)
+    setIsEducationShow(false)
+    setIsExperienceShow(true)
   }
-  const redux: skillObjType = {
-    backgroundImage: `${reduxImg}`,
-    width: 92,
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
-  }
-  const typescript: skillObjType = {
-    backgroundImage: `${storybookImg}`,
-    width: 80,
-    description:
-      'Description Description Description Description Description Description ' +
-      'Description Description Description Description Description' +
-      ' Description Description Description Description Description Description Description',
+
+  const activeStyle = {
+    borderBottomColor: '#987750',
+    textDecoration: 'none',
+    color: '#987750',
   }
 
   return (
-    <div id="skills" className={style.skillsBlock}>
+    <div id="aboutMe" className={style.skillsBlock}>
       <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-        <Title text={'Skills'} />
-        <div className={style.skills}>
-          <InfoSkill title={'HTML'} style={html} />
-          <InfoSkill title={'CSS'} style={css} />
-          <InfoSkill title={'JAVASCRIPT'} style={javaScript} />
-          <InfoSkill title={'REACT'} style={react} />
-          <InfoSkill title={'REDUX'} style={redux} />
-          <InfoSkill title={'TYPESCRIPT'} style={typescript} />
-        </div>
+        <Fade triggerOnce={true} direction={'left'}>
+          <Title text={'About me'} />
+        </Fade>
+        <Fade triggerOnce={true} direction={'right'}>
+          <div className={style.tabHeader}>
+            <ul>
+              <li>
+                <span style={isExperienceShow ? activeStyle : {}} onClick={onExperienceShoeHandler}>
+                  Experience
+                </span>
+              </li>
+              <li>
+                <span style={isEducationShow ? activeStyle : {}} onClick={onEducationShowHandler}>
+                  Education
+                </span>
+              </li>
+              <li>
+                <span style={isSkillsShow ? activeStyle : {}} onClick={onSkillShowHandler}>
+                  Skills
+                </span>
+              </li>
+            </ul>
+          </div>
+        </Fade>
+
+        {isExperienceShow && (
+          <div id="experience" className={style.backgroundBox}>
+            <ul>
+              <li>
+                <Fade delay={100} triggerOnce={true}>
+                  <BackgroundComponent value={partTimeExp} />
+                </Fade>
+              </li>
+              <li>
+                <Fade delay={200} triggerOnce={true}>
+                  <BackgroundComponent value={educationExp} />
+                </Fade>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        {isEducationShow && (
+          <div id="education" className={style.backgroundBox}>
+            <ul>
+              <li>
+                <Fade delay={100} triggerOnce={true}>
+                  <BackgroundComponent value={incubatorStudy} />
+                </Fade>
+              </li>
+              <li>
+                <Fade delay={200} triggerOnce={true}>
+                  <BackgroundComponent value={instituteStudy} />
+                </Fade>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        {isSkillsShow && (
+          // <Fade className={style.skills} triggerOnce={true}>
+          <div id="skills" className={style.skills}>
+            <InfoSkill title={'HTML'} style={html} />
+            <InfoSkill title={'CSS'} style={css} />
+            <InfoSkill title={'JAVASCRIPT'} style={javaScript} />
+            <InfoSkill title={'REACT'} style={react} />
+            <InfoSkill title={'REDUX'} style={redux} />
+            <InfoSkill title={'TYPESCRIPT'} style={typescript} />
+          </div>
+          // </Fade>
+        )}
       </div>
     </div>
   )
