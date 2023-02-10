@@ -14,12 +14,12 @@ function Contacts() {
   return (
     <div id="contacts" className={style.contactsBlock}>
       <div className={`${styleContainer.container} ${style.contactsContainer}`}>
-        <Fade triggerOnce={false} direction={'left'}>
+        <Fade triggerOnce={true} direction={'left'}>
           <Title text={'Contacts'} />
         </Fade>
 
         <div className={style.secondContactsContainer}>
-          <Fade triggerOnce={false} direction={'left'}>
+          <Fade triggerOnce={true} direction={'left'}>
             <div className={style.myContacts}>
               <ul>
                 <li>
@@ -52,7 +52,7 @@ function Contacts() {
             </div>
           </Fade>
           {/*<EmailForm />*/}
-          <Fade triggerOnce={false} direction={'right'}>
+          <Fade triggerOnce={true} direction={'right'}>
             <div className={style.sendMeMessage}>
               <form className={style.formArea}>
                 <input type="text" placeholder={'Your name'} />
