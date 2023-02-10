@@ -19,7 +19,7 @@ function Main() {
   return (
     <div className={style.main}>
       <div className={`${styleContainer.container} ${style.mainContainer}`}>
-        <Fade triggerOnce={false} direction={'left'}>
+        <Fade triggerOnce={true} direction={'left'}>
           <div className={style.text}>
             <span>Hi everyone!</span>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -28,7 +28,7 @@ function Main() {
             <p>I will be a front-end developer.</p>
           </div>
         </Fade>
-        <Fade triggerOnce={false} direction={'right'}>
+        <Fade triggerOnce={true} direction={'right'}>
           <div style={myFoto} className={style.photo}></div>
         </Fade>
       </div>
