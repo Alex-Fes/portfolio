@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { skillObjType } from '../Skills'
+import { Fade } from 'react-awesome-reveal'
+
+import { skillObjType } from '../data/backgroundData'
 
 import style from './InfoSkill.module.scss'
 
@@ -9,26 +11,24 @@ type InfoSkillPropsType = {
   style: skillObjType
 }
 
-export const InfoSkill = (props: InfoSkillPropsType) => {
+export function InfoSkill(props: InfoSkillPropsType) {
   return (
     <div className={style.infographic}>
       <div className={style.skillBar}>
         <div className={style.progressItem}>
           <div className={style.itemIn}>
-            <div className={style.description}>
-              {/*<img src={props.style.backgroundImage} alt="" />*/}
-              {/*<p>{props.style.description}</p>*/}
-            </div>
-
-            <h3>{props.title}</h3>
-
-            <div style={{ width: `${props.style.width}%` }} className={style.percent}>
-              <span>{`${props.style.width} %`}</span>
-            </div>
+            <Fade>
+              <h3>{props.title}</h3>
+              <div style={{ width: `${props.style.width}%` }} className={style.percent}>
+                <span>{`${props.style.width} %`}</span>
+              </div>
+            </Fade>
           </div>
-          <div className={style.bgWrap}>
-            <div className={style.progressBg} style={{ width: `${props.style.width}%` }}></div>
-          </div>
+          <Fade>
+            <div className={style.bgWrap}>
+              <div className={style.progressBg} style={{ width: `${props.style.width}%` }}></div>
+            </div>
+          </Fade>
         </div>
       </div>
     </div>
