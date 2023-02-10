@@ -5,6 +5,7 @@
 
   height: 100%;
   width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
   @include flexMain(flex, column, space-around, center);
   flex-wrap: wrap;
