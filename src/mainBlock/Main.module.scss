@@ -3,47 +3,296 @@
 
 .main {
   /*vh - видимая высота экрана*/
-  height: 100vh;
+  //height: 100vh;
+  min-height: 100vh;
   background-color: $bgColor;
 
+  @include flexMain(flex, row, space-between, center);
+
   .mainContainer {
-    @include flexMain(flex, row, space-around, center);
+    @include flexMain(flex, row, space-between, center);
+    @media screen and (max-width: 980px) {
+      @include flexMain(flex, column-reverse, space-around, center);
+      //flex-wrap: wrap;
+    }
+
 
     .text {
-      border: 1px solid;
-      width: 300px;
-      background-color: $bgSecondColor;
-      @include flexMain(flex, column, flex-start, center);
-      text-align: center;
+      //border: 1px solid;
+      width: 100%;
+      max-width: 500px;
+      //background-color: $bgSecondColor;
+      @include flexMain(flex, column, flex-start, flex-start);
+      //text-align: center;
       box-sizing: border-box;
-      & span {
-        @include text($fontFamily, 22px, 200, 1.2, 0, $textColorForSection);
+      position: relative;
+      @media screen and (max-width: 980px) {
+        max-width: 100%;
+
       }
+
+      //& span {
+      //  @include text($fontFamily, 22px, 200, 1.2, 0, $textColorForSection);
+      //}
+
       & h1 {
-        @include text($fontFamily, 40px, 400, 1.2, 0, $textColorForTitle);
+        padding: 0 0 15px;
+        margin: 0 0 34px;
+        position: relative;
+        @include text($fontFamily, 48px, 400, 1.2, 0, $textColorForTitle);
+        @media screen and (max-width: 980px) {
+          margin-top: 40px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 2px;
+          background-color: rgba(255, 255, 255, .2);
+          width: 150px;
+          left: 0;
+        }
       }
+
       & p {
-        @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
+        padding: 0;
+        margin: 0 0 57px;
+        @include text($fontFamily, 30px, 200, 1.2, 0, $textColorForSection);
       }
+
 
     }
 
-    .photo {
-      border: 1px solid;
-      width: 300px;
-      height: 400px;
-      background-color: #b8beac;
-      background-size: cover;
-      background-position: center;
-      //display: flex;
-      //justify-content: center;
-      //align-items: center;
+
+    .photoBox {
       position: relative;
+      box-sizing: border-box;
+      //margin-bottom: 20px;
+      //left: 50px;
+      //top: 0;
+      //bottom: 0;
+      //@include flexMain(flex, column, flex-start, center);
+
+      .photoHolder {
+        padding: 38px 41px;
+        position: relative;
+        //width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        z-index: 5;
+        //box-sizing: border-box;
+
+        //border: 1px solid;
+        //width: 300px;
+        //height: 300px;
+        //background-color: #b8beac;
+        //background-size: cover;
+        //background-position: center;
+        ////display: flex;
+        ////justify-content: center;
+        ////align-items: center;
+        //position: relative;
+
+        .border1 {
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          bottom: 20px;
+          right: 0;
+          top: 20px;
+          border: 1px solid rgba(255, 255, 255, .2);
+          border-radius: 2px;
+          transition: all .3s ease;
+        }
+
+        .border2 {
+          position: absolute;
+          z-index: 1;
+          left: 20px;
+          bottom: 0;
+          right: 20px;
+          top: 0;
+          border: 1px solid rgba(255, 255, 255, .2);
+          border-radius: 2px;
+          transition: all .3s ease;
+        }
+
+        .img_holder {
+          position: relative;
+          z-index: 2;
+          box-sizing: border-box;
+          //height: 300px;
+          //width: 300px;
+          //background-size: cover;
+          //background-position: center;
+          //background-repeat: no-repeat;
+
+          & img {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .image {
+            position: absolute;
+
+            z-index: 1;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            //background-image: url(src/assets/image/myFoto1.jpg);
+          }
+        }
+
+        .title_holder {
+          text-align: center;
+          padding: 27px 0 20px;
+          position: relative;
+          z-index: 2;
+          box-sizing: border-box;
+
+          & h5 {
+            padding: 0;
+            font-size: 18px;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0 0 8px;
+            @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection)
+          }
+
+          & h3 {
+            margin: 0;
+            padding: 0 10px;
+            font-size: 30px;
+            min-height: 36px;
+            position: relative;
+            @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForTitle);
+
+            & span {
+              box-sizing: border-box;
+              font-size: 30px;
+
+
+              &:before {
+                content: "]";
+                right: 0;
+                bottom: 0;
+                top: auto;
+                position: absolute;
+                color: #44993b;
+                @include keyframes(animSpanPseudoEl) {
+                  0% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
+                }
+                @include animate(animSpanPseudoEl, 2s, ease, infinite, 0s, alternate, none, running)
+
+              }
+
+              &:after {
+                content: "[";
+                left: 0;
+                position: absolute;
+                top: 0;
+                color: #44993b;
+                @include keyframes(animSpanPseudoEl) {
+                  0% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
+                }
+                @include animate(animSpanPseudoEl, 2s, ease, infinite, 0s, alternate, none, running)
+
+              }
+            }
+          }
+        }
+
+      }
+
+      .contact_me {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+        @include flexMain(flex, row, center, center);
+
+        & a {
+          text-decoration: none;
+          padding-left: 20px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          display: block;
+          font-size: 18px;
+          color: #999;
+          position: relative;
+          line-height: 25px;
+          max-width: 100%;
+
+          ::before {
+            bottom: 0;
+            left: 20px;
+            right: 0;
+            height: 1px;
+            background-color: rgba(255, 255, 255, .2);
+            content: '';
+            position: absolute;
+            //transition: all .3s ease;
+          }
+        }
+
+        .circle {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: #44993b;
+          left: 0;
+          top: 50%;
+          margin-top: -5px;
+          display: block;
+        }
+
+        .spanText {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+          @include text($fontFamily, 20px, 300, 1.2, 0, $textColorForSection)
+        }
+      }
     }
   }
 
 
 }
+
+//@keyframes animation {
+//  0% {
+//    opacity: 0;
+//  }
+//  //50% {
+//  //  opacity: 0.5;
+//  //}
+//  100% {
+//    opacity: 1;
+//  }
+//}
+
 //for gitHub
 
 //.text:hover {
