@@ -21,6 +21,16 @@
   transform: $transform;
 }
 
+@mixin animate($keyframesName,$duration,$timing-function,$iteration-count,$delay,$direction,$fill-mode,$play-state){
+  animation: $keyframesName $duration $timing-function $iteration-count $delay $direction $fill-mode $play-state;
+}
+
+@mixin keyframes($name){
+  @keyframes #{$name}{
+    @content;
+  }
+}
+
 @mixin container () {
   width: 80%;
   margin: 0 auto;
