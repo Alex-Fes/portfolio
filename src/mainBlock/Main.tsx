@@ -26,7 +26,7 @@ function Main() {
   }
 
   return (
-    <div className={style.main}>
+    <div id="main" className={style.main}>
       <div className={`${styleContainer.container} ${style.mainContainer}`}>
         <Fade triggerOnce={true} direction={'left'}>
           <div className={style.text}>
@@ -42,39 +42,39 @@ function Main() {
           </div>
         </Fade>
 
-        {/*<Fade triggerOnce={true} direction={'right'}>*/}
-        <div className={style.photoBox}>
-          <div className={style.photoHolder}>
-            <div className={style.border1}></div>
-            <div className={style.border2}></div>
+        <Fade triggerOnce={true} direction={'right'}>
+          <div className={style.photoBox}>
+            <div className={style.photoHolder}>
+              <div className={style.border1}></div>
+              <div className={style.border2}></div>
 
-            <div className={style.img_holder}>
-              <img src="" alt="" />
-              <div style={myFoto} className={style.image}></div>
+              <div className={style.img_holder}>
+                <img src="" alt="" />
+                <div style={myFoto} className={style.image}></div>
+              </div>
+
+              <div className={style.title_holder}>
+                <h5>Hi there! I AM</h5>
+
+                <h3>
+                  <span>
+                    <ReactTypingEffect
+                      speed={150}
+                      eraseSpeed={100}
+                      text={['Aleksei Fesenko', 'Frontend Developer', 'Freelancer']}
+                    />
+                  </span>
+                </h3>
+              </div>
             </div>
-
-            <div className={style.title_holder}>
-              <h5>Hi there! I AM</h5>
-
-              <h3>
-                <span>
-                  <ReactTypingEffect
-                    speed={150}
-                    eraseSpeed={100}
-                    text={['Aleksei Fesenko', 'Frontend Developer', 'Freelancer']}
-                  />
-                </span>
-              </h3>
+            <div className={style.contact_me}>
+              <a href="#contacts">
+                <span className={style.circle}></span>
+                <span className={style.spanText}>I’m available for a freelance job. Hire me</span>
+              </a>
             </div>
           </div>
-          <div className={style.contact_me}>
-            <a href="#contacts">
-              <span className={style.circle}></span>
-              <span className={style.spanText}>I’m available for a freelance job. Hire me</span>
-            </a>
-          </div>
-        </div>
-        {/*</Fade>*/}
+        </Fade>
       </div>
     </div>
   )
