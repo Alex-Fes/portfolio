@@ -6,9 +6,11 @@
   background-color: $bgColor2;
 
   .contactsContainer {
+    min-height: 60vh;
 
     .secondContactsContainer {
-      margin-top: 50px;
+     //margin-top: -50px;
+      margin-bottom: 50px;
       width: 100%;
       @include flexMain(flex, row, center, stretch);
       @media screen and (max-width: 993px) {
@@ -141,6 +143,7 @@
           position: relative;
           z-index: 1;
           margin-bottom: 30px;
+          margin-top: 30px;
         }
       }
     }
