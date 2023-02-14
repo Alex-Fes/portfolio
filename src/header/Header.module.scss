@@ -8,13 +8,16 @@
   background: linear-gradient(to bottom, $bgSecondColor, $bgColor);
   position: fixed;
   z-index: 1000;
-  @include flexMain(flex, row, space-around, center);
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-    height: 130px;
-  }
+  @include flexMain(flex, row, flex-end, center);
+  //@media screen and (max-width: 500px) {
+  //  //flex-direction: column;
+  //  height: 130px;
+  //}
 
-  & h4 {
-    @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
+  //& h4 {
+  //  @include text($fontFamily, 20px, 400, 1.2, 0, $textColorForSection);
+  //}
+  .nav {
+    max-width: 1100px;
   }
 }
