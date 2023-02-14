@@ -1,0 +1,94 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.burgerNav {
+  width: 100%;
+  height: 100%;
+
+  .burgerNavItems {
+    @include flexMain(flex, column, space-between, center);
+    background-color: $bgSecondColor;
+    position: absolute;
+    height: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transform: translate(0, -100px);
+    transition: 0.7s;
+
+    a {
+      @include text($fontFamily, 16px, 400, 1.2, 0, $textColorForSection);
+      //transition: all .3s ease;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+        color: $bgColorForFooterIcon;
+      }
+    }
+
+    .active {
+      color: $bgColorForFooterIcon;
+    }
+  }
+
+  .show {
+    transform: translate(0, 0);
+    height: 90px;
+  }
+
+  .burgerButton {
+    width: 40px;
+    height: 30px;
+    //background-color: #44993b;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      background-color: $textColorForTitle;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      top: 0;
+
+
+    }
+
+    &:after {
+      content: '';
+      background-color: $textColorForTitle;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+
+
+    }
+
+
+    & span {
+      position: absolute;
+      background-color: $textColorForTitle;
+      width: 100%;
+      height: 3px;
+      top: 14px
+    }
+
+    //.active {
+    //  //background-color: $bgColorForFooterIcon;
+    //  .burgerButton:before {
+    //    transform: rotate(45deg);
+    //  }
+    //}
+  }
+
+  @media screen and(min-width: 767px) {
+    display: none;
+  }
+}
