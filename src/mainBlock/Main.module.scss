@@ -2,8 +2,6 @@
 @import "src/common/styles/sass/mixins";
 
 .main {
-  /*vh - видимая высота экрана*/
-  //height: 100vh;
   min-height: 100vh;
   background-color: $bgColor;
 
@@ -13,27 +11,19 @@
     @include flexMain(flex, row, space-between, center);
     @media screen and (max-width: 980px) {
       @include flexMain(flex, column-reverse, space-around, center);
-      //flex-wrap: wrap;
+
     }
 
 
     .text {
-      //border: 1px solid;
       width: 100%;
       max-width: 500px;
-      //background-color: $bgSecondColor;
       @include flexMain(flex, column, flex-start, flex-start);
-      //text-align: center;
       box-sizing: border-box;
       position: relative;
       @media screen and (max-width: 980px) {
         max-width: 100%;
-
       }
-
-      //& span {
-      //  @include text($fontFamily, 22px, 200, 1.2, 0, $textColorForSection);
-      //}
 
       & h1 {
         padding: 0 0 15px;
@@ -44,7 +34,7 @@
           margin-top: 40px;
         }
 
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           bottom: 0;
@@ -60,39 +50,23 @@
         margin: 0 0 57px;
         @include text($fontFamily, 30px, 200, 1.2, 0, $textColorForSection);
       }
-
-
     }
 
 
     .photoBox {
       position: relative;
       box-sizing: border-box;
-      //margin-bottom: 20px;
-      //left: 50px;
-      //top: 0;
-      //bottom: 0;
-      //@include flexMain(flex, column, flex-start, center);
+      @media screen and (max-width: 980px) {
+        margin-top: 150px;
+        margin-bottom: 40px;
+      }
 
       .photoHolder {
         padding: 38px 41px;
         position: relative;
-        //width: 100%;
         box-sizing: border-box;
         margin-bottom: 30px;
         z-index: 5;
-        //box-sizing: border-box;
-
-        //border: 1px solid;
-        //width: 300px;
-        //height: 300px;
-        //background-color: #b8beac;
-        //background-size: cover;
-        //background-position: center;
-        ////display: flex;
-        ////justify-content: center;
-        ////align-items: center;
-        //position: relative;
 
         .border1 {
           position: absolute;
@@ -122,11 +96,6 @@
           position: relative;
           z-index: 2;
           box-sizing: border-box;
-          //height: 300px;
-          //width: 300px;
-          //background-size: cover;
-          //background-position: center;
-          //background-repeat: no-repeat;
 
           & img {
             width: 300px;
@@ -139,7 +108,6 @@
 
           .image {
             position: absolute;
-
             z-index: 1;
             left: 0;
             bottom: 0;
@@ -148,7 +116,6 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            //background-image: url(src/assets/image/myFoto1.jpg);
           }
         }
 
@@ -181,8 +148,7 @@
               box-sizing: border-box;
               font-size: 30px;
 
-
-              &:before {
+              &::before {
                 content: "]";
                 right: 0;
                 bottom: 0;
@@ -201,7 +167,7 @@
 
               }
 
-              &:after {
+              &::after {
                 content: "[";
                 left: 0;
                 position: absolute;
@@ -221,7 +187,6 @@
             }
           }
         }
-
       }
 
       .contact_me {
@@ -243,7 +208,7 @@
           line-height: 25px;
           max-width: 100%;
 
-          ::before {
+          &::before {
             bottom: 0;
             left: 20px;
             right: 0;
@@ -277,39 +242,4 @@
       }
     }
   }
-
-
 }
-
-//@keyframes animation {
-//  0% {
-//    opacity: 0;
-//  }
-//  //50% {
-//  //  opacity: 0.5;
-//  //}
-//  100% {
-//    opacity: 1;
-//  }
-//}
-
-//for gitHub
-
-//.text:hover {
-//    top: -20px;
-//    left: 20px;
-//    box-shadow: 0 0 0 -3px white,
-//    0 0,
-//    0 0 0 -3px white,
-//    0 0;
-//}
-
-/*border-style: solid;*/
-/*border-width: 3px;*/
-//box-shadow: 10px -10px 0 -3px white,
-//10px -10px,
-//20px -20px 0 -3px white,
-//20px -20px;
-//transition: box-shadow 1s, top 1s, left 1s;
-//top: 0;
-//left: 0;
