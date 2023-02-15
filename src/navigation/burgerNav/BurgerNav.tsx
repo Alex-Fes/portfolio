@@ -67,10 +67,7 @@ function BurgerNav() {
         </Link>
       </div>
 
-      <div
-        className={isOpen ? `${style.burgerButton} ${style.active}` : style.burgerButton}
-        onClick={isOpenHandler}
-      >
+      <div className={!isOpen ? style.burgerButton : style.activeBurger} onClick={isOpenHandler}>
         <span></span>
       </div>
       {/*<button className={style.navToggle}>*/}

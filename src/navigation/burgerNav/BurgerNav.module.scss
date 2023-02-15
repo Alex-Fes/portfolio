@@ -39,56 +39,92 @@
   }
 
   .burgerButton {
-    width: 40px;
+    width: 30px;
     height: 30px;
     //background-color: #44993b;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 35px;
     cursor: pointer;
 
     &:before {
       content: '';
-      background-color: $textColorForTitle;
+      background-color: $textColorForSection;
       position: absolute;
       width: 100%;
       height: 3px;
       left: 0;
       top: 0;
-
-
+      transition: all 0.3s ease 0s;
     }
 
     &:after {
       content: '';
-      background-color: $textColorForTitle;
+      background-color: $textColorForSection;
       position: absolute;
       width: 100%;
       height: 3px;
       left: 0;
       bottom: 0;
-
-
+      transition: all 0.3s ease 0s;
     }
-
 
     & span {
       position: absolute;
-      background-color: $textColorForTitle;
+      background-color: $textColorForSection;
       width: 100%;
       height: 3px;
-      top: 14px
+      top: 13px;
+      transition: all 0.3s ease 0s;
+      animation: burgerSpan 0.4s cubic-bezier(.165,.84,.44,1);
     }
 
-    //.active {
-    //  //background-color: $bgColorForFooterIcon;
-    //  .burgerButton:before {
-    //    transform: rotate(45deg);
-    //  }
-    //}
+
   }
+  .activeBurger {
+    width: 30px;
+    height: 30px;
+    //background-color: #44993b;
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    cursor: pointer;
+    //background-color: $bgColorForFooterIcon;
+    &:before {
+      content: '';
+      background-color: $bgColorForFooterIcon;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      top: 11px;
+      transform: rotate(45deg);
+      transition: all 0.3s ease 0s;
+    }
+    &:after {
+      content: '';
+      background-color: $bgColorForFooterIcon;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: 16px;
+      transform: rotate(-45deg);
+      transition: all 0.3s ease 0s;
+    }
+  }
+
 
   @media screen and(min-width: 767px) {
     display: none;
+  }
+}
+
+@keyframes burgerSpan {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
