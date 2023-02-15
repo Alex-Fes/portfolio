@@ -70,11 +70,6 @@ function BurgerNav() {
       <div className={!isOpen ? style.burgerButton : style.activeBurger} onClick={isOpenHandler}>
         <span></span>
       </div>
-      {/*<button className={style.navToggle}>*/}
-      {/*  <span className={style.barTop}></span>*/}
-      {/*  <span className={style.barMid}></span>*/}
-      {/*  <span className={style.barBot}></span>*/}
-      {/*</button>*/}
     </div>
   )
 }
