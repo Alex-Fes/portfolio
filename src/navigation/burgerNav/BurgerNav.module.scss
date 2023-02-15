@@ -19,7 +19,6 @@
 
     a {
       @include text($fontFamily, 16px, 400, 1.2, 0, $textColorForSection);
-      //transition: all .3s ease;
       cursor: pointer;
 
       &:hover {
@@ -41,7 +40,6 @@
   .burgerButton {
     width: 30px;
     height: 30px;
-    //background-color: #44993b;
     position: absolute;
     top: 30px;
     right: 35px;
@@ -76,20 +74,19 @@
       height: 3px;
       top: 13px;
       transition: all 0.3s ease 0s;
-      animation: burgerSpan 0.4s cubic-bezier(.165,.84,.44,1);
+      animation: burgerSpan 0.4s cubic-bezier(.165, .84, .44, 1);
     }
 
-
   }
+
   .activeBurger {
     width: 30px;
     height: 30px;
-    //background-color: #44993b;
     position: absolute;
     top: 30px;
     right: 35px;
     cursor: pointer;
-    //background-color: $bgColorForFooterIcon;
+
     &:before {
       content: '';
       background-color: $bgColorForFooterIcon;
@@ -101,6 +98,7 @@
       transform: rotate(45deg);
       transition: all 0.3s ease 0s;
     }
+
     &:after {
       content: '';
       background-color: $bgColorForFooterIcon;
@@ -113,7 +111,6 @@
       transition: all 0.3s ease 0s;
     }
   }
-
 
   @media screen and(min-width: 767px) {
     display: none;
