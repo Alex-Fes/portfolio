@@ -6,7 +6,7 @@ import { Fade } from 'react-awesome-reveal'
 
 import facebook from '../assets/image/facebook-svgrepo.svg'
 import linkedin from '../assets/image/linkedin-svgrepo-com.svg'
-import Title from '../common/components/title/Title'
+import { Title } from '../common/components/title/Title'
 import styleContainer from '../common/styles/Container.module.scss'
 
 import style from './Contacts.module.scss'
