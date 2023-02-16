@@ -6,7 +6,7 @@ import styles from './Copyright.module.scss'
 
 export const Copyright = (props: any) => {
   return (
-    <Typography color="text.secondary" align="center" {...props}>
+    <Typography color="text.secondary" align="center" {...props} component={'div'}>
       <Grid className={styles.href}>
         {'Copyright © '}
         {new Date().getFullYear()}
