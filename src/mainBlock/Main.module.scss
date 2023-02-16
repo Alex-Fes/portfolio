@@ -8,6 +8,7 @@
   @include flexMain(flex, row, space-between, center);
 
   .mainContainer {
+    padding-top: 50px;
     @include flexMain(flex, row, space-between, center);
     @media screen and (max-width: 980px) {
       @include flexMain(flex, column-reverse, space-around, center);
@@ -47,8 +48,88 @@
 
       & p {
         padding: 0;
-        margin: 0 0 57px;
+        margin: 0 0 37px;
         @include text($fontFamily, 30px, 200, 1.2, 0, $textColorForSection);
+      }
+
+      .signature {
+        width: 100%;
+        position: relative;
+        margin-bottom: 70px;
+        @include flexMain(flex, row, flex-end, flex-end);
+
+      }
+
+
+      .downloadCV {
+        width: 100%;
+        height: 100%;
+        outline: 1px solid $textColorForSection;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-bottom: 80px;
+        display: flex;
+        position: relative;
+
+        &:hover {
+          outline: 1px solid $bgColorForFooterIcon;
+        }
+
+        & a {
+          width: 100%;
+          //top: 0;
+          //left: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          max-width: 100%;
+          //width: 340px;
+          //height: 220px;
+          text-decoration: none;
+          //font-size: 18px;
+          color: #888;
+          //font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 20px 0 20px 0;
+          transition: all 0.3s ease;
+          @include text($fontFamily, 18px, 400, 1.2, 1.5px, $textColorForSection);
+
+          .icon {
+            position: relative;
+            padding-top: 18px;
+            color: $textColorForTitle;
+
+            .boxSvg {
+              width: 58px;
+              height: 58px;
+              display: block;
+              margin-bottom: 14px;
+              fill: currentcolor;
+            }
+
+            .arrowSvg {
+              position: absolute;
+              left: 50%;
+              margin-left: -29px;
+              top: 8px;
+              will-change: transform;
+              fill: currentcolor;
+            }
+
+          }
+
+
+          & span {
+
+            //&:hover {
+            //  color: $bgColorForFooterIcon;
+            //}
+          }
+        }
+
+
       }
     }
 
@@ -195,6 +276,7 @@
         position: relative;
         z-index: 5;
         @include flexMain(flex, row, center, center);
+        cursor: pointer;
 
         & a {
           text-decoration: none;
@@ -208,7 +290,7 @@
           line-height: 25px;
           max-width: 100%;
 
-          &::before {
+          &:before {
             bottom: 0;
             left: 20px;
             right: 0;
@@ -239,6 +321,7 @@
           display: block;
           @include text($fontFamily, 20px, 300, 1.2, 0, $textColorForSection)
         }
+
       }
     }
   }
