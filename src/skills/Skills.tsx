@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Fade } from 'react-awesome-reveal'
 
-import Title from '../common/components/title/Title'
+import { Title } from '../common/components/title/Title'
 import styleContainer from '../common/styles/Container.module.scss'
 
 import { BackgroundComponent } from './background/BackgroundComponent'
@@ -21,25 +21,19 @@ import {
 import { InfoSkill } from './infoSkill/InfoSkill'
 import style from './Skills.module.scss'
 
+type AboutStateType = 'experience' | 'education' | 'skills'
+
 function Skills() {
-  const [isSkillsShow, setIsSkillsShow] = useState(false)
-  const [isEducationShow, setIsEducationShow] = useState(false)
-  const [isExperienceShow, setIsExperienceShow] = useState(true)
+  const [aboutPage, setAboutPage] = useState<AboutStateType>('experience')
 
   const onSkillShowHandler = () => {
-    setIsSkillsShow(true)
-    setIsEducationShow(false)
-    setIsExperienceShow(false)
+    setAboutPage('skills')
   }
   const onEducationShowHandler = () => {
-    setIsSkillsShow(false)
-    setIsEducationShow(true)
-    setIsExperienceShow(false)
+    setAboutPage('education')
   }
   const onExperienceShoeHandler = () => {
-    setIsSkillsShow(false)
-    setIsEducationShow(false)
-    setIsExperienceShow(true)
+    setAboutPage('experience')
   }
 
   const activeStyle = {
@@ -58,17 +52,26 @@ function Skills() {
           <div className={style.tabHeader}>
             <ul>
               <li>
-                <span style={isExperienceShow ? activeStyle : {}} onClick={onExperienceShoeHandler}>
+                <span
+                  style={aboutPage === 'experience' ? activeStyle : {}}
+                  onClick={onExperienceShoeHandler}
+                >
                   Experience
                 </span>
               </li>
               <li>
-                <span style={isEducationShow ? activeStyle : {}} onClick={onEducationShowHandler}>
+                <span
+                  style={aboutPage === 'education' ? activeStyle : {}}
+                  onClick={onEducationShowHandler}
+                >
                   Education
                 </span>
               </li>
               <li>
-                <span style={isSkillsShow ? activeStyle : {}} onClick={onSkillShowHandler}>
+                <span
+                  style={aboutPage === 'skills' ? activeStyle : {}}
+                  onClick={onSkillShowHandler}
+                >
                   Skills
                 </span>
               </li>
@@ -76,7 +79,7 @@ function Skills() {
           </div>
         </Fade>
 
-        {isExperienceShow && (
+        {aboutPage === 'experience' && (
           <div id="experience" className={style.backgroundBox}>
             <ul>
               <li>
@@ -93,7 +96,7 @@ function Skills() {
           </div>
         )}
 
-        {isEducationShow && (
+        {aboutPage === 'education' && (
           <div id="education" className={style.backgroundBox}>
             <ul>
               <li>
@@ -110,7 +113,7 @@ function Skills() {
           </div>
         )}
 
-        {isSkillsShow && (
+        {aboutPage === 'skills' && (
           // <Fade className={style.skills} triggerOnce={true}>
           <div id="skills" className={style.skills}>
             <InfoSkill title={'HTML'} style={html} />
