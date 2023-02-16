@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { styleObjType } from '../Projects'
+import { styleObjType } from '../projectsData'
 
 import style from './Project.module.scss'
 
@@ -10,18 +10,18 @@ type ProjectPropsType = {
 
 function Project(props: ProjectPropsType) {
   return (
-    <div className={style.project}>
-      <a
-        style={{ backgroundImage: props.style.backgroundImage }}
-        href=""
-        className={style.picture}
-      ></a>
-
+    <a
+      style={{ backgroundImage: props.style.backgroundImage }}
+      href={props.style.url}
+      target="_blank"
+      className={style.projectItem}
+      rel="noreferrer"
+    >
       <div className={style.projectInfo}>
-        <h3 className={style.projectTitle}>{props.style.title}</h3>
-        <span className={style.description}>{props.style.description}</span>
+        <div className={style.projectTitle}>{props.style.title}</div>
+        <span className={style.projectDescription}>{props.style.description}</span>
       </div>
-    </div>
+    </a>
   )
 }
 
