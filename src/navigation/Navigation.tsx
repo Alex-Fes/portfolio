@@ -26,7 +26,7 @@ function Navigation() {
         spy={true}
         smooth={true}
         hashSpy={true}
-        offset={50}
+        offset={-60}
         duration={500}
         delay={100}
         isDynamic={true}
@@ -39,7 +39,7 @@ function Navigation() {
         spy={true}
         smooth={true}
         hashSpy={true}
-        offset={50}
+        offset={-60}
         duration={500}
         delay={100}
         isDynamic={true}
@@ -52,7 +52,7 @@ function Navigation() {
         spy={true}
         smooth={true}
         hashSpy={true}
-        offset={-215}
+        offset={-225}
         duration={500}
         delay={100}
         isDynamic={true}
