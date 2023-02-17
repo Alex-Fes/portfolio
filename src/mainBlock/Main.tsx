@@ -101,7 +101,7 @@ function Main() {
               isDynamic={true}
             >
               <span className={style.circle}></span>
-              <span className={style.spanText}>I’m available for a freelance job. Hire me</span>
+              <span className={style.spanText}>I’m available for job. Hire me</span>
             </Link>
           </div>
         </div>
