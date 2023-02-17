@@ -3,8 +3,9 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import ReactTypingEffect from 'react-typing-effect'
 
+// @ts-ignore
+import cv from '../assets/CV/CV-front-end.pdf'
 import myfoto from '../assets/image/myFoto1.jpg'
-import signature from '../assets/image/signature.png'
 import styleContainer from '../common/styles/Container.module.scss'
 
 import style from './Main.module.scss'
@@ -28,16 +29,14 @@ function Main() {
           <h1>Frontend Developer</h1>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore molestiae non
-            possimus! Asperiores, at consequuntur debitis deleniti doloribus fuga fugit iusto labore
-            laborum odit officiis porro quisquam, suscipit tempora!
+            I create, develop and maintain projects of all sizes and directions. I specialize in
+            creating projects using React, TypeScript and Redux state manager. I focus on new
+            technologies, libraries and web services.
           </p>
-          <div className={style.signature}>
-            <img src={signature} alt="signature" />
-          </div>
+          <div className={style.signature}>{/*<img src={signature} alt="signature" />*/}</div>
 
           <div className={style.downloadCV}>
-            <a href="">
+            <a href={cv} download="">
               <span className={style.icon}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
