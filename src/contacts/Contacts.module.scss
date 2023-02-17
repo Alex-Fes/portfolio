@@ -22,6 +22,7 @@
 
         width: auto;
         min-width: 300px;
+        margin-top: 30px;
 
         @media screen and (max-width: 993px) {
           @include flexMain(flex, row, center, center);
@@ -100,6 +101,58 @@
 
           .items {
             margin-left: 20px;
+            transition: all .3s ease;
+
+            .feedback {
+              position: relative;
+              width: 100%;
+              height: 40px;
+              display: block;
+
+              .error {
+                display: block;
+                position: relative;
+                top: 0;
+                opacity: 1;
+                text-align: left;
+                transition: all .3s ease;
+                padding: 10px 0;
+                animation: feedBackOpen 0.4s cubic-bezier(.165, .84, .44, 1);
+                @include text($fontFamily, 20px, 500, 1, 1px, $errorColor)
+              }
+
+              .errorHide {
+                display: block;
+                position: relative;
+                bottom: 20px;
+                opacity: 0;
+                animation: feedBackClose 0.4s cubic-bezier(.165, .84, .44, 1);
+                @include text($fontFamily, 20px, 500, 1, 1px, $errorColor)
+              }
+
+              .success {
+                display: block;
+                position: relative;
+                top: -23px;;
+                opacity: 1;
+                text-align: left;
+                transition: all .3s ease;
+                padding: 10px 0;
+                animation: feedBackOpen 0.4s cubic-bezier(.165, .84, .44, 1);
+                @include text($fontFamily, 20px, 600, 1, 0.5, $successColor)
+              }
+
+              .successHide {
+                display: block;
+                position: relative;
+                bottom: 40px;
+                opacity: 0;
+                animation: feedBackClose 0.4s cubic-bezier(.165, .84, .44, 1);
+                @include text($fontFamily, 20px, 600, 1, 1px, $successColor)
+              }
+
+            }
+
 
             .itemHalf {
               margin-bottom: 20px;
@@ -126,6 +179,24 @@
                   @include text($fontFamily, 20px, 400, 1, 0.5, $textColorForSection);
                   vertical-align: middle;
                   transition: all .3s ease;
+
+                  input:-webkit-autofill,
+                  input:-webkit-autofill:hover,
+                  input:-webkit-autofill:focus,
+                  input:-webkit-autofill,
+                  textarea:-webkit-autofill,
+                  textarea:-webkit-autofill:hover,
+                  textarea:-webkit-autofill:focus,
+                  select:-webkit-autofill,
+                  select:-webkit-autofill:hover,
+                  select:-webkit-autofill:focus {
+                    border: 0;
+                    -webkit-text-fill-color: #888;
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+                    transition: background-color 5000s ease-in-out 0s;
+                    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+                  }
+
 
                   &:focus {
                     outline: 1px solid $bgColorForFooterIcon;
@@ -164,13 +235,18 @@
 
             .sendMessage {
               cursor: pointer;
+              position: relative;
 
               &:hover {
                 outline: 1px solid $bgColorForFooterIcon;
                 transition: all .5s ease;
               }
 
-              & a {
+              & button {
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
                 display: block;
                 line-height: 26px;
                 white-space: nowrap;
@@ -182,10 +258,10 @@
                 text-decoration: none;
                 border: 1px solid rgba(255, 255, 255, .2);
                 transition: all .3s ease;
+                background-color: transparent;
                 @include text($fontFamily, 20px, 400, 1.5, 0, $textColorForTitle);
 
                 &:hover {
-                  outline: 1px solid $bgColorForFooterIcon;
                   color: $bgColorForFooterIcon;
                   transition: all .5s ease;
                 }
@@ -195,6 +271,28 @@
         }
       }
     }
+  }
+}
+
+@keyframes feedBackOpen {
+  0% {
+    bottom: 100%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes feedBackClose {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
   }
 }
 
