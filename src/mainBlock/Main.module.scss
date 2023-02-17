@@ -21,8 +21,10 @@
       @include flexMain(flex, column, flex-start, flex-start);
       box-sizing: border-box;
       position: relative;
+      padding-top: 50px;
       @media screen and (max-width: 980px) {
         max-width: 100%;
+
       }
 
       & h1 {
