@@ -33,7 +33,7 @@ function Main() {
             creating projects using React, TypeScript and Redux state manager. I focus on new
             technologies, libraries and web services.
           </p>
-          <div className={style.signature}>{/*<img src={signature} alt="signature" />*/}</div>
+          {/*<div className={style.signature}>/!*<img src={signature} alt="signature" />*!/</div>*/}
 
           <div className={style.downloadCV}>
             <a href={cv} download="">
@@ -70,10 +70,7 @@ function Main() {
             <div className={style.border1}></div>
             <div className={style.border2}></div>
 
-            <div className={style.img_holder}>
-              <img src="" alt="" />
-              <div style={myFoto} className={style.image}></div>
-            </div>
+            <div style={myFoto} className={style.img_holder}></div>
 
             <div className={style.title_holder}>
               <h5>Hi there! I AM</h5>
