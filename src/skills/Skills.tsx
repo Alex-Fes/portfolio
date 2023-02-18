@@ -45,39 +45,33 @@ function Skills() {
   return (
     <div id="aboutMe" className={style.skillsBlock}>
       <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-        <Fade triggerOnce={true} direction={'left'}>
-          <Title text={'About me'} />
-        </Fade>
-        <Fade triggerOnce={true} direction={'right'}>
-          <div className={style.tabHeader}>
-            <ul>
-              <li>
-                <span
-                  style={aboutPage === 'experience' ? activeStyle : {}}
-                  onClick={onExperienceShoeHandler}
-                >
-                  Experience
-                </span>
-              </li>
-              <li>
-                <span
-                  style={aboutPage === 'education' ? activeStyle : {}}
-                  onClick={onEducationShowHandler}
-                >
-                  Education
-                </span>
-              </li>
-              <li>
-                <span
-                  style={aboutPage === 'skills' ? activeStyle : {}}
-                  onClick={onSkillShowHandler}
-                >
-                  Skills
-                </span>
-              </li>
-            </ul>
-          </div>
-        </Fade>
+        <Title text={'About me'} />
+
+        <div className={style.tabHeader}>
+          <ul>
+            <li>
+              <span
+                style={aboutPage === 'experience' ? activeStyle : {}}
+                onClick={onExperienceShoeHandler}
+              >
+                Experience
+              </span>
+            </li>
+            <li>
+              <span
+                style={aboutPage === 'education' ? activeStyle : {}}
+                onClick={onEducationShowHandler}
+              >
+                Education
+              </span>
+            </li>
+            <li>
+              <span style={aboutPage === 'skills' ? activeStyle : {}} onClick={onSkillShowHandler}>
+                Skills
+              </span>
+            </li>
+          </ul>
+        </div>
 
         {aboutPage === 'experience' && (
           <div id="experience" className={style.backgroundBox}>
