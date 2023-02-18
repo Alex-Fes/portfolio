@@ -21,7 +21,7 @@
       @include flexMain(flex, column, flex-start, flex-start);
       box-sizing: border-box;
       position: relative;
-      padding-top: 50px;
+      padding-top: 40px;
       @media screen and (max-width: 980px) {
         max-width: 100%;
 
@@ -134,6 +134,7 @@
 
         .border1 {
           position: absolute;
+          box-sizing: border-box;
           z-index: 1;
           left: 0;
           bottom: 20px;
@@ -146,6 +147,7 @@
 
         .border2 {
           position: absolute;
+          box-sizing: border-box;
           z-index: 1;
           left: 20px;
           bottom: 0;
@@ -158,29 +160,14 @@
 
         .img_holder {
           position: relative;
-          z-index: 2;
-          box-sizing: border-box;
+          height: 300px;
+          width: 280px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: background-size 1s ease;
+          object-fit: cover;
 
-          & img {
-            width: 300px;
-            height: 300px;
-            opacity: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          }
-
-          .image {
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          }
         }
 
         .title_holder {
