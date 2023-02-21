@@ -1,0 +1,75 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.myContacts {
+  @include flexMain(flex, column, space-between, center);
+
+  width: auto;
+  min-width: 300px;
+  margin-top: 30px;
+
+  @media screen and (max-width: 993px) {
+    @include flexMain(flex, row, center, center);
+    margin: 0 0 30px;
+  }
+
+  & span {
+    @include text($fontFamily, 20px, 200, 1.2, 0, $textColorForSection);
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    @media screen and (max-width: 993px) {
+      @include flexMain(flex, row, space-around, center);
+      margin: 0; /* Обнуляем значение отступов */
+      padding: 4px; /* Значение полей */
+      flex-wrap: wrap;
+    }
+  }
+
+  & li {
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    @media screen and (max-width: 993px) {
+      display: inline; /* Отображать как строчный элемент */
+      margin-right: 15px; /* Отступ слева */
+      padding: 3px; /* Поля вокруг текста */
+
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  & img {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    margin-bottom: -1px;
+  }
+
+  & img {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    margin-bottom: -1px;
+  }
+
+  & h6 {
+    margin: 15px 0 0;
+    position: relative;
+  }
+
+  & i {
+    padding-right: 10px;
+  }
+
+  &::before {
+
+  }
+}
