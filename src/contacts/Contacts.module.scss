@@ -20,27 +20,6 @@
   }
 }
 
-@keyframes feedBackOpen {
-  0% {
-    bottom: 100%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes feedBackClose {
-  0% {
-    bottom: 0;
-    opacity: 1;
-  }
-  100% {
-    bottom: 100%;
-    opacity: 0;
-  }
-}
 
 
 
